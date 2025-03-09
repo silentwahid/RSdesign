@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RH portfolio</title>
+</head>
+<body>
+
+
+
+
+    <style>
+       @import url('https://fonts.cdnfonts.com/css/garet');
+       
+                                                
+    /* sample using the font */
+    body{
+        font-family: 'Garet', sans-serif;
+        background: #efefdc;
+    }
+*{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+span {
+  color: #000000;
+} 
+/*------------------------------------------NAV--------------------------------------*/
+
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+    border-radius: 5px;
+  }
+  header.sticky {
+    background-color: #efefdc;
+    box-shadow: 0 0 10px rgba(0 0 0 / 10%);
+}
+    
+  .logo {
+    flex: 1;
+    text-decoration: none;
+    margin-left: 30px;
+  }
+  
+  .logo img {
+    max-width: 15%;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  nav {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+  } 
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+  }
+  
+  nav li {
+    margin: 0 10px;
+    position: relative;
+    margin-left: 5%;
+  }
+  
+  nav li a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px;
+  }
+  
+  nav .dropdown ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    display: none;
+  }
+  
+  nav .dropdown:hover ul {
+    display: block;
+  }
+  
+  nav .dropdown li {
+    margin: 5px 0;
+  }
+  
+  nav .dropdown a {
+    display: block;
+    padding: 5px;
+  }
+  
+  nav .dropdown:hover > a {
+    background-color: #ddd;
+    border-radius: 5px;
+  }
+  
+  nav a:hover {
+    background-color: #ddd;
+    border-radius: 5px;
+  }
+.nav-icon{
+  display: flex;
+  align-items:center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.nav-icon i{
+  margin-right:20px ;
+  color: #2c2c2c;
+  font-size: 25px;
+  font-weight: 400;
+  transition: all .42s ease ;
+}
+.nav-icon i:hover{
+  transform:scale(1.1);
+  color: #ee1c47;
+}
+#menu-icon{
+  font-size: 35px;
+  color: #2c2c2c;
+  z-index: 10001;
+  cursor: pointer;
+}
+
+/*                        home                        */
+.home{
+  display: flex;
+  align-items: center;
+}
+.hmtxt{
+  text-align: center;
+}
+.hmtxt h4{
+  font-size: 300%;
+  color: #786767;
+}
+.hmtxt p{
+  font-size: 400%;
+}
+.hmtxt h1{
+  font-size: 500%;
+}
+.home img{
+  width: 40%;
+}
+/*                 mywork                */
+.work img{
+  width: 100%;
+}
+.picgrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto)
+}
+.one {
+  grid-column: 1;
+  grid-row: 1/4;
+  text-align: center
+}
+.two {
+  grid-column: 2;
+  grid-row: 1 / 2;
+  font-size: 20px
+}
+.three {
+  grid-column: 2;
+  grid-row: 2 / 4;
+}
+
+.wrktxt{
+  grid-column: 3 ;
+  grid-row: 1/4;
+  display: flex;
+  flex-direction: column;
+}
+.wrktxt h1{
+  font-size: 500%;
+}
+.wrktxt p{
+  font-size: 200%;
+}
+
+/*                   about            */
+.about{
+  display: flex;
+}
+.righttxt{
+  background-color: #462f11;
+  width: 40%;
+  padding: 10%;
+}
+.righttxt p{
+  font-size: 150%;
+}
+.lefttxt{
+  width: 40%;
+  padding: 10%;
+}
+.lefttxt h1{
+  font-size: 500%;
+}
+.lefttxt h2{
+  font-size: 400%;
+}
+/*                     contact                            */
+.contact{
+  height: 50vh;
+}
+.contact h1{
+  font-size: 500%;
+  text-align: center;
+  margin-bottom: 10%;
+}
+.smcs{
+  display: flex;
+  border-top:2px solid #000000;
+  margin: 0 5% 0 5%;
+
+}
+.SMC{
+  margin-top: 20px;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+}
+.SMC img{
+  width: 50px;
+}
+.SMC h1{
+  
+}
+
+    </style>
+
+
+
+
+    <!--           navbar             -->
+    <header >
+        <a href="index.html" class="logo"><img src="img/2.jpg" alt=""></a>
+        <nav> 
+        <ul class="navmenu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#work">My Work</a></li>
+          <li><a href="#about">About me</a></li> 
+          <li><a href="#contact">Contact</a></li>
+        </ul> 
+    
+        <div class="nav-icon">
+          <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+      </nav>
+    
+    </header>
+
+
+
+<!------                  HOME                        ------->
+<br><br><br><br><br>
+
+
+    <section class="home">
+        <div class="hmtxt">
+            <h1>GRAPHIC <br>DESIGNER</h1>
+            <h4>RS DESIGN</h4>
+            <p>TO MAKE YOUR IMAGINATION <br> COME TRUE</p>
+        </div>
+        <img src="img/2.jpg" alt="">
+
+    </section>
+
+
+
+<!----------              MY WORK                 ----------->
+
+
+<section class="work">
+    <div class="picgrid">
+      <div class="one"> <img src="img/3.jpg" alt=""></div>
+      <div class="two">  <img src="img/1.jpg" alt=""></div>
+      <div class="three">  <img src="img/4.jpg" alt=""></div>
+       
+        <div class="wrktxt">
+        <h1>MY WORK</h1>
+        <p>For a neat and elegant branding package.
+            Including logo design,posters,
+            business cards,social media posts,menu and more </p>
+    </div>
+      
+    </div>
+  
+
+
+</section>
+
+
+
+<!--------     ABOUT ME     -------->
+<section class="about">
+    <div class="lefttxt"> 
+        <h1>ABOUT ME</h1>
+        <h2>RS DESIGN</h2> 
+    </div>
+    <div class="righttxt"> <p>I'm a passionate graphic designer
+         speciakizing in creating clean,impactful designs 
+         that help brands stand out.With a strong focus on 
+         minimalist aesthetics and thoughtful design, i aim 
+         to deliver visuals that not only look great but also
+          communicate powerful messages.My approach combines
+           creativity with strategy,ensuring that every design
+            aligns with client's vision and goals. </p>
+        </div>
+</section>
+
+
+<!-------         CONTACT         --------->
+
+<section class="contact">
+    <h1>CONTACT</h1>
+    <div class="smcs">
+ <div class="SMC">
+        <img src="img/fb.webp" alt=""> 
+        <h2>facebook</h2>
+        <p> RevoSponsor Design</p>
+    </div>
+    <div class="SMC">
+      <img src="img/email.webp" alt=""> 
+      <h2>E-mail</h2>
+      <p>revosponsordesign@gmail.com </p>
+    </div>
+    </div>
+   
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    const header = document.querySelector("header")
+
+window.addEventListener ("scroll", function(){
+    header.classList.toggle ("sticky", this.window.scrollY >0);
+})
+ 
+let menu = document.querySelector('#menu-icon');
+let navmenu = document.querySelector('.navmenu');
+
+menu.onclick = () => {
+    menu.classList.toggle('bx-x');
+    navmenu.classList.toggle('open');
+}    
+</script>
+</body>
+</html>
